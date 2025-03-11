@@ -1,0 +1,30 @@
+{
+  "name": "multi-tenant-task-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build && node dist/app.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc"
+  },
+  "author": "sahithi.maligireddy999@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@tsed/common": "^8.5.1",
+    "@tsed/di": "^8.5.1",
+    "@tsed/platform-express": "^8.5.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "nanoid": "^5.1.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
