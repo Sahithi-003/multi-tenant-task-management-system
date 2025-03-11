@@ -16,12 +16,6 @@ import { User } from "../data/entity/user";
 
 @Controller("/users")
 export class UserController {
-  // @Inject()
-  // private userService!: UserService;
-
-  // constructor() {
-  //   console.log("UserController initialized!", this.userService); // ✅ Debugging log
-  // }
   constructor(@Inject() private userService: UserService) {
     // ✅ Inject UserService explicitly
     // console.log("UserController initialized! ✅", this.userService);
