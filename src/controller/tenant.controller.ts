@@ -16,10 +16,7 @@ import { Tenant } from "../data/entity/tenant";
 
 @Controller("/tenants")
 export class TenantController {
-  constructor(@Inject() private tenantService: TenantService) {
-    // ✅ Inject TenantService explicitly
-    // console.log("TenantController initialized! ✅", this.tenantService);
-  }
+  constructor(@Inject() private tenantService: TenantService) {}
   protected getService(): TenantService {
     return this.tenantService;
   }

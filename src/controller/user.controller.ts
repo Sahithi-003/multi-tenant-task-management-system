@@ -67,7 +67,6 @@ export class UserController {
     @Res() res: Response
   ): Promise<void> {
     try {
-      // console.log("req.body", req.body, "req", req);
       if (!req.body) {
         res.status(400).json({ error: "User data is required." });
         return;
