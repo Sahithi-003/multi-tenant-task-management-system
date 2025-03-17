@@ -6,7 +6,7 @@ import { Tenant } from "./tenant.js";
 export class User extends IdentifiableEntity {
   @Column({ type: "varchar", length: 255 })
   name: string;
-  @Index()
+  // @Index()
   @Column({ type: "varchar", unique: true })
   email: string;
   @Column({ type: "varchar" })

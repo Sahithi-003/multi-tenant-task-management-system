@@ -7,12 +7,30 @@ import { UserService } from "./service/user.service.js";
 import { TenantController } from "./controller/tenant.controller.js";
 import { TenantService } from "./service/tenant.service.js";
 import { PlatformApplication } from "@tsed/common";
+import { TaskController } from "./controller/task.controller.js";
+import { ProjectController } from "./controller/project.controller.js";
+import { ProjectService } from "./service/project.service.js";
+import { TaskService } from "./service/task.service.js";
 
 @Configuration({
   mount: {
-    "/api": [UserController, TenantController],
+    "/api": [
+      UserController,
+      TenantController,
+      TaskController,
+      ProjectController,
+    ],
   },
-  imports: [UserController, UserService, TenantController, TenantService],
+  imports: [
+    UserController,
+    UserService,
+    TenantController,
+    TenantService,
+    ProjectController,
+    ProjectService,
+    TaskController,
+    TaskService,
+  ],
 })
 export class AppServer {
   constructor(private app: PlatformApplication) {}
