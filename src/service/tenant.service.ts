@@ -12,12 +12,12 @@ export class TenantService implements TenantRepository {
     this.repository = AppDataSource.getRepository(Tenant);
   }
 
-  async create(user: Tenant): Promise<Tenant> {
-    return this.repository.save(user);
+  async create(tenant: Tenant): Promise<Tenant> {
+    return this.repository.save(tenant);
   }
 
-  async update(user: Tenant): Promise<Tenant> {
-    return this.repository.save(user);
+  async update(tenant: Tenant): Promise<Tenant> {
+    return this.repository.save(tenant);
   }
 
   async getById(id: string): Promise<Tenant> {
