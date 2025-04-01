@@ -37,7 +37,7 @@ export class AppServer {
 
   $beforeRoutesInit() {
     this.app.use(express.json()); // ✅ Correctly register JSON middleware
-    this.app.use(express.urlencoded({ extended: true })); // Optional: for form data
+    this.app.use(express.urlencoded({ extended: true }));
   }
 }
 const bootstrap = async () => {
@@ -48,6 +48,7 @@ const bootstrap = async () => {
     const platform = await PlatformExpress.bootstrap(AppServer); // Get the PlatformExpress instance
     const app = platform.app.rawApp; // Get the Express app
     app.use(express.json()); // ✅ Ensure JSON body is parsed
+    app.use(express.urlencoded({ extended: true }));
     app.listen(3000, () => {
       console.log("Server is running at http://localhost:3000 🚀");
     });
